@@ -76,10 +76,17 @@ LOADER_DICT = {"UnstructuredHTMLLoader": ['.html'],
                "CSVLoader": [".csv"],
                "RapidOCRPDFLoader": [".pdf"],
                "RapidOCRLoader": ['.png', '.jpg', '.jpeg', '.bmp'],
-               "UnstructuredFileLoader": ['.eml', '.msg', '.rst',
+               "UnstructuredFileLoader": ['.rst',
                                           '.rtf', '.txt', '.xml',
-                                          '.docx', '.epub', '.odt',
+                                          '.docx', '.doc','.epub', '.odt',
                                           '.ppt', '.pptx', '.tsv'],
+                "MHTMLLoader": ['.mhtml'],
+                "UnstructuredExcelLoader":['.xlsx'],
+                "UnstructuredEmailLoader":['.eml'],
+                #.msg loader not usable at this moment
+                # "OutlookMessageLoader":['.msg'],
+
+
                }
 SUPPORTED_EXTS = [ext for sublist in LOADER_DICT.values() for ext in sublist]
 
@@ -183,6 +190,14 @@ def get_loader(loader_name: str, file_path_or_content: Union[str, bytes, io.Stri
         loader = DocumentLoader(file_path_or_content, mode="elements")
     elif loader_name == "UnstructuredHTMLLoader":
         loader = DocumentLoader(file_path_or_content, mode="elements")
+    elif loader_name == "MHTMLLoader":
+        loader = DocumentLoader(file_path_or_content)
+    elif loader_name == "UnstructuredExcelLoader":
+        loader = DocumentLoader(file_path_or_content, mode="elements")
+    elif loader_name == "UnstructuredEmailLoader":
+        loader = DocumentLoader(file_path_or_content, mode="elements",process_attachments=True)
+    elif loader_name == "OutlookMessageLoader":
+        loader = DocumentLoader(file_path_or_content)
     else:
         loader = DocumentLoader(file_path_or_content)
     return loader

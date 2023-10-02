@@ -8,8 +8,6 @@ from datetime import datetime
 from pprint import pprint
 
 # 设置numexpr最大线程数，默认为CPU核心数
-
-## This is only for testing purpose
 try:
     import numexpr
 
@@ -854,3 +852,4 @@ if __name__ == "__main__":
 # )
 # # print the completion
 # print(completion.choices[0].message.content)
+
