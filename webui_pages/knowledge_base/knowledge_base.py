@@ -48,7 +48,46 @@ def file_exists(kb: str, selected_rows: List) -> Tuple[str, str]:
         if os.path.isfile(file_path):
             return file_name, file_path
     return "", ""
+##### try with msg file and zip file extraction
+import streamlit as st
+import os
+import zipfile
+import rarfile
+import extract_msg
+from docx import Document
+import shutil
 
+def decode_name(name):
+    try:
+        return name.encode('cp437').decode('gbk')
+    except:
+        return name
+
+def extract_compressed_file(file, temp_folder):
+    if file.name.endswith('.zip'):
+        with zipfile.ZipFile(file, 'r') as zip_ref:
+            for member in zip_ref.namelist():
+                decoded_name = decode_name(member)
+                target_path = os.path.join(temp_folder, decoded_name)
+                os.makedirs(os.path.dirname(target_path), exist_ok=True)
+                if not decoded_name.endswith('/'):
+                    with open(target_path, 'wb') as outfile:
+                        outfile.write(zip_ref.read(member))
+    elif file.name.endswith('.rar'):
+        with rarfile.RarFile(file, 'r', charset='gbk') as rar_ref:
+            rar_ref.extractall(temp_folder)
+
+def extract_msg_content(file, temp_folder):
+    msg = extract_msg.Message(file)
+    doc = Document()
+    doc.add_paragraph(msg.body)
+    doc_path = os.path.join(temp_folder, file.name + '.docx')
+    doc.save(doc_path)
+
+    for attachment in msg.attachments:
+        attachment_path = os.path.join(temp_folder, attachment.longFilename)
+        with open(attachment_path, 'wb') as attach_file:
+            attach_file.write(attachment.data)
 
 def knowledge_base_page(api: ApiRequest):
     try:
@@ -68,6 +107,10 @@ def knowledge_base_page(api: ApiRequest):
             return f"{kb_name} ({kb['vs_type']} @ {kb['embed_model']})"
         else:
             return kb_name
+    def copy_files_to_folder(src_folder, dest_folder):
+        for foldername, subfolders, filenames in os.walk(src_folder):
+            for filename in filenames:
+                shutil.copy(os.path.join(foldername, filename), dest_folder)
 
     selected_kb = st.selectbox(
         "请选择或新建知识库：",
@@ -128,12 +171,65 @@ def knowledge_base_page(api: ApiRequest):
     elif selected_kb:
         kb = selected_kb
 
-
+        upload_option = st.selectbox('请选择上传模式：',
+                                    ('普通文件：',
+                                    '.msg文件以及压缩文件：'),key=1)
         # 上传文件
-        files = st.file_uploader("上传知识文件：",
-                                 [i for ls in LOADER_DICT.values() for i in ls],
-                                 accept_multiple_files=True,
-                                 )
+        if upload_option =='普通文件：':
+            files = st.file_uploader("上传知识文件：",
+                                    [i for ls in LOADER_DICT.values() for i in ls],
+                                    accept_multiple_files=True,
+                                    )
+               # 预处理.msg file 和.zip,.rar文件，将.msg file body提取到.docx中并保存，将attachement提取并保存；将zip/rar文件解压缩
+        if upload_option =='.msg文件以及压缩文件：':
+            # st.write("将.msg file body提取到.docx中并保存，将attachement提取并保存；将zip/rar文件解压缩")
+            
+            # in case of this state, files variable is [] to elimitate the button-display error
+            files=[]
+            
+            uploaded_msg_email_files = st.file_uploader("[注意！！！] .msg文件和压缩包文件需要在此处进行预处理。请上传文件,\
+                                                        然后点击‘手动将.msg,压缩包文件拷贝到知识库目录’,\
+                                                        点击全部选中文档库中文档，选择’添加至向量库‘：",
+                                            ['.msg', '.zip', '.rar'],
+                                            accept_multiple_files=True)
+
+
+
+            # files = st.write(temp_files)
+            if st.button("手动将msg,zip/rar文件拷贝到知识库目录",disabled=len(uploaded_msg_email_files) == 0):
+                        # disabled=len(uploaded_msg_email_files) == 0):
+
+                #process the files:
+                temp_folder = "temp_extraction"
+
+                os.makedirs(temp_folder, exist_ok=True)
+
+                # Get the directory of current working folder
+                current_working_directory = os.getcwd()
+
+                # Construct the absolute path to the "temp_extraction" folder
+                temp_extraction_path_source = os.path.join(current_working_directory, temp_folder)
+                # Construct the absolute path to the "selected_kb" folder
+                temp_extraction_path_dest = os.path.join(current_working_directory, "knowledge_base",selected_kb, "content")
+
+
+                if uploaded_msg_email_files:
+                    for uploaded_file in uploaded_msg_email_files:
+                        with st.spinner(f"Processing {uploaded_file.name}..."):
+                            if uploaded_file.name.endswith(('.zip', '.rar')):
+                                extract_compressed_file(uploaded_file, temp_folder)
+                            elif uploaded_file.name.endswith('.msg'):
+                                extract_msg_content(uploaded_file, temp_folder)
+                    st.success("Processing completed!")
+                # extract all files from "temp_extraction" to the folder
+
+                copy_files_to_folder(temp_extraction_path_source, temp_extraction_path_dest)
+
+                #delete the files in the temp folder after the files are processed
+                # delete_files_and_subfolders_in_folder(temp_extraction_path_source)
+                shutil.rmtree(temp_extraction_path_source)
+                
+            
 
 
         # with st.sidebar:
@@ -174,6 +270,9 @@ def knowledge_base_page(api: ApiRequest):
         else:
             st.write(f"知识库 `{kb}` 中已有文件:")
             st.info("知识库中包含源文件与向量库，请从下表中选择文件后操作")
+            
+
+
             doc_details.drop(columns=["kb_name"], inplace=True)
             doc_details = doc_details[[
                 "No", "file_name", "document_loader", "text_splitter", "docs_count", "in_folder", "in_db",
@@ -206,12 +305,14 @@ def knowledge_base_page(api: ApiRequest):
                     "#gridToolBar": {"display": "none"},
                 },
                 allow_unsafe_jscode=True,
-                enable_enterprise_modules=False
+                enable_enterprise_modules=False,
+                
             )
 
             selected_rows = doc_grid.get("selected_rows", [])
 
             cols = st.columns(4)
+
             file_name, file_path = file_exists(kb, selected_rows)
             if file_path:
                 with open(file_path, "rb") as fp:
