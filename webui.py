@@ -6,8 +6,17 @@ import os
 from configs import VERSION
 from server.utils import api_address
 
+import os
+import streamlit as st
+from dotenv import load_dotenv
+from streamlit_cognito_auth import CognitoAuthenticator
 
 api = ApiRequest(base_url=api_address())
+
+load_dotenv()
+pool_id = os.getenv("POOL_ID")
+app_client_id = os.getenv("APP_CLIENT_ID")
+app_client_secret = os.getenv("APP_CLIENT_SECRET")
 
 if __name__ == "__main__":
     st.set_page_config(
@@ -20,6 +29,19 @@ if __name__ == "__main__":
             'About': f"""欢迎使用 Langchain-Chatchat WebUI {VERSION}！"""
         }
     )
+
+    authenticator = CognitoAuthenticator(
+    pool_id=pool_id,
+    app_client_id=app_client_id,
+    app_client_secret=app_client_secret,
+)
+    
+    is_logged_in = authenticator.login()
+    if not is_logged_in:
+        st.stop()
+
+    def logout():
+        authenticator.logout()
 
     if not chat_box.chat_inited:
         st.toast(
@@ -61,6 +83,9 @@ if __name__ == "__main__":
             # menu_icon="chat-quote",
             default_index=default_index,
         )
+
+        st.text(f"Welcome,\n{authenticator.get_username()}")
+        st.button("Logout", "logout_btn", on_click=logout)
 
     if selected_page in pages:
         pages[selected_page]["func"](api)
