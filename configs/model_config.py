@@ -25,7 +25,7 @@ MODEL_PATH = {
         "text2vec-bge-large-chinese": "shibing624/text2vec-bge-large-chinese",
         "m3e-small": "moka-ai/m3e-small",
         # "m3e-base": "moka-ai/m3e-base",
-        "m3e-base": r"F:\AIGC\m3e-base",
+        "m3e-base": "/home/ec2-user/m3e-base",
 
         "m3e-large": "moka-ai/m3e-large",
         "bge-small-zh": "BAAI/bge-small-zh",
@@ -41,18 +41,17 @@ MODEL_PATH = {
         # 以下部分模型并未完全测试，仅根据fastchat和vllm模型的模型列表推定支持
         "chatglm-6b": "THUDM/chatglm-6b",
         "chatglm2-6b": "THUDM/chatglm2-6b",
-        # "chatglm2-6b-int4": "THUDM/chatglm2-6b-int4",
-        "chatglm2-6b-int4": r"F:\AIGC\chatglm2-6b-int4",
+        "chatglm2-6b-int4": "THUDM/chatglm2-6b-int4",
+        # "chatglm2-6b-int4": "/home/ec2-user/chatglm2-6b-int4",
         # "chatglm2-6b-32k": "THUDM/chatglm2-6b-32k", 
-        "chatglm2-6b-32k-int4": r"G:\MODELS\chatglm2-6b-32k-int4",
+        "chatglm2-6b-32k-int4": "/home/ec2-user/chatglm2-6b-32k-int4",
 
         "baichuan2-13b":"baichuan-inc/Baichuan-13B-Chat",
-        "baichuan2-7b":"baichuan-inc/Baichuan2-7B-Chat",
         "baichuan2-7b":"baichuan-inc/Baichuan2-7B-Chat",
 
         "baichuan-7b": "baichuan-inc/Baichuan-7B",
         "baichuan-13b": "baichuan-inc/Baichuan-13B",
-        'Baichuan2-7B-Chat-4bits':r'G:\MODELS\Baichuan2-7B-Chat-4bits',
+        # 'Baichuan2-7B-Chat-4bits':r'G:\MODELS\Baichuan2-7B-Chat-4bits',
 
         "aquila-7b":"BAAI/Aquila-7B",
         "aquilachat-7b":"BAAI/AquilaChat-7B",
@@ -76,7 +75,7 @@ MODEL_PATH = {
         "stablelm-tuned-alpha-7b":"stabilityai/stablelm-tuned-alpha-7b",
 
         "Llama-2-13b-hf":"meta-llama/Llama-2-13b-hf",    
-        "Chinese-Llama-2-7b-4bit": r"G:\MODELS\Chinese-Llama-2-7b-4bit",   
+        "Chinese-Llama-2-7b-4bit": "LinkSoul/Chinese-Llama-2-7b-4bit",   
         "Llama-2-70b-hf":"meta-llama/Llama-2-70b-hf",
         "open_llama_13b":"openlm-research/open_llama_13b",    
         "vicuna-13b-v1.3":"lmsys/vicuna-13b-v1.3",
@@ -96,16 +95,17 @@ MODEL_PATH = {
 }
 
 # 选用的 Embedding 名称
-EMBEDDING_MODEL = "m3e-base" # 可以尝试最新的嵌入式sota模型：piccolo-large-zh
+# EMBEDDING_MODEL = "m3e-base" # 可以尝试最新的嵌入式sota模型：piccolo-large-zh
+EMBEDDING_MODEL = "piccolo-large-zh"
 
 # Embedding 模型运行设备。设为"auto"会自动检测，也可手动设定为"cuda","mps","cpu"其中之一。
 EMBEDDING_DEVICE = "auto"
 
 # LLM 名称
-# LLM_MODEL = "chatglm2-6b-int4"
-LLM_MODEL = "chatglm2-6b-32k-int4"
+LLM_MODEL = "chatglm2-6b-int4"
+# LLM_MODEL = "chatglm2-6b-32k-int4"
 # LLM_MODEL = "Chinese-Llama-2-7b-4bit"
-# LLM_MODEL = "Baichuan2-7B-Chat-4bits"
+# LLM_MODEL = "baichuan2-7b"
 
 # LLM 运行设备。设为"auto"会自动检测，也可手动设定为"cuda","mps","cpu"其中之一。
 LLM_DEVICE = "auto"

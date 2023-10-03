@@ -9,7 +9,7 @@ HTTPX_DEFAULT_TIMEOUT = 300.0
 OPEN_CROSS_DOMAIN = False
 
 # 各服务器默认绑定host。如改为"0.0.0.0"需要修改下方所有XX_SERVER的host
-DEFAULT_BIND_HOST = "127.0.0.1"
+DEFAULT_BIND_HOST = "0.0.0.0"
 
 # webui.py server
 WEBUI_SERVER = {
@@ -40,7 +40,7 @@ FSCHAT_MODEL_WORKERS = {
         "device": LLM_DEVICE,
         # False,'vllm',使用的推理加速框架,使用vllm如果出现HuggingFace通信问题，参见doc/FAQ
         "infer_turbo": "vllm" if sys.platform.startswith("linux") else False,
-
+        #  "infer_turbo":False,
         # model_worker多卡加载需要配置的参数
         # "gpus": None, # 使用的GPU，以str的格式指定，如"0,1"，如失效请使用CUDA_VISIBLE_DEVICES="0,1"等形式指定
         # "num_gpus": 1, # 使用GPU的数量
