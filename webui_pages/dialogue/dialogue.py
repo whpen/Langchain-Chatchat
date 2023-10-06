@@ -155,6 +155,8 @@ def dialogue_page(api: ApiRequest):
                 text += t
                 chat_box.update_msg(text)
             chat_box.update_msg(text, streaming=False)  # 更新最终的字符串，去除光标
+            #解决了无法因为页面无法刷新所以出bug的问题！！！
+            st.rerun()
 
 
         elif dialogue_mode == "自定义Agent问答":
@@ -181,26 +183,35 @@ def dialogue_page(api: ApiRequest):
                     chat_box.insert_msg(Markdown("...", in_expander=True, title="使用工具...", state="complete"))
                     chat_box.update_msg("\n\n".join(d.get("tools", [])), element_index=element_index, streaming=False)
             chat_box.update_msg(text, element_index=0, streaming=False)
+            #解决了无法因为页面无法刷新所以出bug的问题！！！
+            st.rerun()
         elif dialogue_mode == "知识库问答":
             chat_box.ai_say([
                 f"正在查询知识库 `{selected_kb}` ...",
                 Markdown("...", in_expander=True, title="知识库匹配结果", state="complete"),
             ])
             text = ""
+
             for d in api.knowledge_base_chat(prompt,
-                                             knowledge_base_name=selected_kb,
-                                             top_k=kb_top_k,
-                                             score_threshold=score_threshold,
-                                             history=history,
-                                             model=llm_model,
-                                             temperature=temperature):
+                                            knowledge_base_name=selected_kb,
+                                            top_k=kb_top_k,
+                                            score_threshold=score_threshold,
+                                            history=history,
+                                            model=llm_model,
+                                            temperature=temperature):
                 if error_msg := check_error_msg(d):  # check whether error occured
                     st.error(error_msg)
                 elif chunk := d.get("answer"):
+                    
                     text += chunk
                     chat_box.update_msg(text, element_index=0)
+  
             chat_box.update_msg(text, element_index=0, streaming=False)
             chat_box.update_msg("\n\n".join(d.get("docs", [])), element_index=1, streaming=False)
+            
+            #解决了无法因为页面无法刷新所以出bug的问题！！！
+            st.rerun()
+
         elif dialogue_mode == "搜索引擎问答":
             chat_box.ai_say([
                 f"正在执行 `{search_engine}` 搜索...",
@@ -220,6 +231,8 @@ def dialogue_page(api: ApiRequest):
                     chat_box.update_msg(text, element_index=0)
             chat_box.update_msg(text, element_index=0, streaming=False)
             chat_box.update_msg("\n\n".join(d.get("docs", [])), element_index=1, streaming=False)
+            #解决了无法因为页面无法刷新所以出bug的问题！！！
+            st.rerun()
 
     now = datetime.now()
     with st.sidebar:
