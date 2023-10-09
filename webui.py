@@ -61,12 +61,27 @@ if __name__ == "__main__":
     }
 
     with st.sidebar:
+        #add logo 
+
+        #add "powered by" logo
+
         st.image(
             os.path.join(
                 "img",
-                "logo-long-chatchat-trans-v2.png"
+                "powered_by.png",
             ),
-            use_column_width=True
+            width = 150,
+            use_column_width=False
+        )
+
+
+        st.image(
+            os.path.join(
+                "img",
+                "logo-long-chatchat-trans-v2.png",
+            ),
+            width = 150,
+            use_column_width=False
         )
         st.caption(
             f"""<p align="right">当前版本：{VERSION}</p>""",

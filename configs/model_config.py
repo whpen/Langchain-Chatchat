@@ -24,8 +24,8 @@ MODEL_PATH = {
         "text2vec-multilingual": "shibing624/text2vec-base-multilingual",
         "text2vec-bge-large-chinese": "shibing624/text2vec-bge-large-chinese",
         "m3e-small": "moka-ai/m3e-small",
-        # "m3e-base": "moka-ai/m3e-base",
-        "m3e-base": "/home/ec2-user/m3e-base",
+        "m3e-base": "moka-ai/m3e-base",
+        # "m3e-base": "/home/ec2-user/m3e-base",
 
         "m3e-large": "moka-ai/m3e-large",
         "bge-small-zh": "BAAI/bge-small-zh",
@@ -95,8 +95,8 @@ MODEL_PATH = {
 }
 
 # 选用的 Embedding 名称
-# EMBEDDING_MODEL = "m3e-base" # 可以尝试最新的嵌入式sota模型：piccolo-large-zh
-EMBEDDING_MODEL = "piccolo-large-zh"
+EMBEDDING_MODEL = "m3e-base" # 可以尝试最新的嵌入式sota模型：piccolo-large-zh
+# EMBEDDING_MODEL = "piccolo-large-zh"
 
 # Embedding 模型运行设备。设为"auto"会自动检测，也可手动设定为"cuda","mps","cpu"其中之一。
 EMBEDDING_DEVICE = "auto"
