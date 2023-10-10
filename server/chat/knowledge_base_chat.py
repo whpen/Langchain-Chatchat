@@ -14,6 +14,7 @@ import json
 import os
 from urllib.parse import urlencode
 from server.knowledge_base.kb_doc_api import search_docs
+from configs.server_config import DOMAIN_FOR_PORT_7861
 
 
 async def knowledge_base_chat(query: str = Body(..., description="用户输入", examples=["你好"]),
@@ -76,9 +77,18 @@ async def knowledge_base_chat(query: str = Body(..., description="用户输入",
                 url = "file://" + doc.metadata["source"]
             else:
                 parameters = urlencode({"knowledge_base_name": knowledge_base_name, "file_name":filename})
-                url = f"{request.base_url}knowledge_base/download_doc?" + parameters
+                # url = f"{request.base_url}knowledge_base/download_doc?" + parameters
+                if DOMAIN_FOR_PORT_7861:
+                    url =f"https://{DOMAIN_FOR_PORT_7861}/knowledge_base/download_doc?" + parameters
+                else: 
+                    url = f"http://localhost:7861/knowledge_base/download_doc?" + parameters
+
+
             text = f"""出处 [{inum + 1}] [{filename}]({url}) \n\n{doc.page_content}\n\n"""
+            print("knowlodgebasename:",knowledge_base_name)
+            print("filename:",filename)
             source_documents.append(text)
+
 
         if stream:
             async for token in callback.aiter():

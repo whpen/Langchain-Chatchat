@@ -1,0 +1,1285 @@
+usage: startup.py [-h] [-a] [--all-api] [--llm-api] [-o] [-m]
+                  [-n MODEL_NAME [MODEL_NAME ...]] [-c CONTROLLER_ADDRESS]
+                  [--api] [-p] [-w] [-q]
+startup.py: error: unrecognized arguments: –a
+usage: startup.py [-h] [-a] [--all-api] [--llm-api] [-o] [-m]
+                  [-n MODEL_NAME [MODEL_NAME ...]] [-c CONTROLLER_ADDRESS]
+                  [--api] [-p] [-w] [-q]
+startup.py: error: unrecognized arguments: –a
+usage: startup.py [-h] [-a] [--all-api] [--llm-api] [-o] [-m]
+                  [-n MODEL_NAME [MODEL_NAME ...]] [-c CONTROLLER_ADDRESS]
+                  [--api] [-p] [-w] [-q]
+startup.py: error: unrecognized arguments: –all
+2023-10-10 08:15:57,273 - instantiator.py[line:21] - INFO: Created a temporary directory at /tmp/tmpqpsqxl0a
+2023-10-10 08:15:57,273 - instantiator.py[line:76] - INFO: Writing /tmp/tmpqpsqxl0a/_remote_module_non_scriptable.py
+2023-10-10 08:15:57 | INFO | root | 正在启动服务：
+2023-10-10 08:15:57 | INFO | root | 如需查看 llm_api 日志，请前往 /home/ubuntu/Langchain-Chatchat/logs
+
+
+==============================Langchain-Chatchat Configuration==============================
+操作系统：Linux-5.15.0-1045-aws-x86_64-with-glibc2.31.
+python版本：3.10.12 | packaged by conda-forge | (main, Jun 23 2023, 22:40:32) [GCC 12.3.0]
+项目版本：v0.2.5
+langchain版本：0.0.310. fastchat版本：0.2.29
+
+
+当前使用的分词器：RecursiveCharacterTextSplitter
+当前启动的LLM模型：['chatglm2-6b-int4'] @ cuda
+{'device': 'cuda',
+ 'host': '0.0.0.0',
+ 'infer_turbo': 'vllm',
+ 'model_path': 'THUDM/chatglm2-6b-int4',
+ 'port': 20002}
+当前Embbedings模型： m3e-base @ cuda
+==============================Langchain-Chatchat Configuration==============================
+
+
+2023-10-10 08:16:00 | ERROR | stderr | INFO:     Started server process [3059]
+2023-10-10 08:16:00 | ERROR | stderr | INFO:     Waiting for application startup.
+2023-10-10 08:16:00 | ERROR | stderr | INFO:     Application startup complete.
+2023-10-10 08:16:00 | ERROR | stderr | INFO:     Uvicorn running on http://0.0.0.0:20000 (Press CTRL+C to quit)
+2023-10-10 08:16:01,915 - instantiator.py[line:21] - INFO: Created a temporary directory at /tmp/tmp08ntgcgk
+2023-10-10 08:16:01,915 - instantiator.py[line:76] - INFO: Writing /tmp/tmp08ntgcgk/_remote_module_non_scriptable.py
+2023-10-10 08:16:02,015 - instantiator.py[line:21] - INFO: Created a temporary directory at /tmp/tmp2i662bhu
+2023-10-10 08:16:02,016 - instantiator.py[line:76] - INFO: Writing /tmp/tmp2i662bhu/_remote_module_non_scriptable.py
+2023-10-10 08:16:02,183 - instantiator.py[line:21] - INFO: Created a temporary directory at /tmp/tmp5b977xg0
+2023-10-10 08:16:02,183 - instantiator.py[line:76] - INFO: Writing /tmp/tmp5b977xg0/_remote_module_non_scriptable.py
+2023-10-10 08:16:02,371 - instantiator.py[line:21] - INFO: Created a temporary directory at /tmp/tmpcicoaqb_
+2023-10-10 08:16:02,372 - instantiator.py[line:76] - INFO: Writing /tmp/tmpcicoaqb_/_remote_module_non_scriptable.py
+2023-10-10 08:16:02,389 - instantiator.py[line:21] - INFO: Created a temporary directory at /tmp/tmp5fpx0899
+2023-10-10 08:16:02,389 - instantiator.py[line:76] - INFO: Writing /tmp/tmp5fpx0899/_remote_module_non_scriptable.py
+2023-10-10 08:16:02,405 - instantiator.py[line:21] - INFO: Created a temporary directory at /tmp/tmpxpf_ka52
+2023-10-10 08:16:02,406 - instantiator.py[line:76] - INFO: Writing /tmp/tmpxpf_ka52/_remote_module_non_scriptable.py
+2023-10-10 08:16:02,417 - instantiator.py[line:21] - INFO: Created a temporary directory at /tmp/tmpj4gq9fe_
+2023-10-10 08:16:02,417 - instantiator.py[line:76] - INFO: Writing /tmp/tmpj4gq9fe_/_remote_module_non_scriptable.py
+INFO:     Started server process [3256]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:7861 (Press CTRL+C to quit)
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to False.
+
+
+  You can now view your Streamlit app in your browser.
+
+  URL: http://0.0.0.0:8501
+
+2023-10-10 08:16:36,492 - instantiator.py[line:21] - INFO: Created a temporary directory at /tmp/tmp161p9je2
+2023-10-10 08:16:36,492 - instantiator.py[line:76] - INFO: Writing /tmp/tmp161p9je2/_remote_module_non_scriptable.py
+2023-10-10 08:16:55.739 Please replace `st.experimental_rerun` with `st.rerun`.
+
+`st.experimental_rerun` will be removed after 2024-04-01.
+2023-10-10 08:16:55,747 - instantiator.py[line:21] - INFO: Created a temporary directory at /tmp/tmpguf3ft2k
+2023-10-10 08:16:55,747 - instantiator.py[line:76] - INFO: Writing /tmp/tmpguf3ft2k/_remote_module_non_scriptable.py
+2023-10-10 08:16:55 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34098 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:16:55 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34098 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:16:55 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:16:56 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34108 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:16:56 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34108 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:16:56 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:17:08 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57020 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:17:08 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57020 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:17:08 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57020 - "POST /chat/knowledge_base_chat HTTP/1.1" 200 OK
+2023-10-10 08:17:08 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/chat/knowledge_base_chat "HTTP/1.1 200 OK"
+2023-10-10 08:17:08 | INFO | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: moka-ai/m3e-base
+2023-10-10 08:17:11 | INFO | root | loading vector store in 'LEGAL_KNOWLEDGE_BANK_DO_NOT_DELETE/vector_store' from disk.
+2023-10-10 08:17:11 | INFO | faiss.loader | Loading faiss with AVX2 support.
+2023-10-10 08:17:11 | INFO | faiss.loader | Successfully loaded faiss with AVX2 support.
+{'kb_name': 'LEGAL_KNOWLEDGE_BANK_DO_NOT_DELETE', 'vs_type': 'faiss', 'embed_model': 'm3e-base', 'file_count': 239, 'create_time': datetime.datetime(2023, 10, 9, 14, 0, 21)}
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:02<00:00,  2.38s/it]Batches: 100%|██████████| 1/1 [00:02<00:00,  2.38s/it]
+2023-10-10 08:17:15 | INFO | stdout | INFO:     127.0.0.1:47816 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+2023-10-10 08:17:15 | INFO | openai | message='OpenAI API response' path=http://0.0.0.0:20000/v1/chat/completions processing_ms=None request_id=None response_code=200
+2023-10-10 08:17:15 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20002/worker_generate_stream "HTTP/1.1 200 OK"
+2023-10-10 08:17:17 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+knowlodgebasename: LEGAL_KNOWLEDGE_BANK_DO_NOT_DELETE
+filename: FW  回复   线上同意协议的效力.msg.docx
+knowlodgebasename: LEGAL_KNOWLEDGE_BANK_DO_NOT_DELETE
+filename: FW  回复   线上同意协议的效力.msg.docx
+knowlodgebasename: LEGAL_KNOWLEDGE_BANK_DO_NOT_DELETE
+filename: FW  回复   线上同意协议的效力.msg.docx
+INFO:     127.0.0.1:59274 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:17:17 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59274 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:17:17 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:17:18 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59278 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:17:18 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59278 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:17:18 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:17:32 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:48208 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:17:32 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:48208 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:17:32 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:48208 - "POST /chat/knowledge_base_chat HTTP/1.1" 200 OK
+2023-10-10 08:17:32 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/chat/knowledge_base_chat "HTTP/1.1 200 OK"
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 90.45it/s]
+2023-10-10 08:17:32 | INFO | stdout | INFO:     127.0.0.1:35650 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+2023-10-10 08:17:32 | INFO | openai | message='OpenAI API response' path=http://0.0.0.0:20000/v1/chat/completions processing_ms=None request_id=None response_code=200
+2023-10-10 08:17:32 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20002/worker_generate_stream "HTTP/1.1 200 OK"
+2023-10-10 08:17:35 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+knowlodgebasename: LEGAL_KNOWLEDGE_BANK_DO_NOT_DELETE
+filename: CN PII Regulatory Compliance (Project Lyra and Vega Update) 2021-08-02.docx
+knowlodgebasename: LEGAL_KNOWLEDGE_BANK_DO_NOT_DELETE
+filename: 个人信息与数据保护框架简介.pdf
+knowlodgebasename: LEGAL_KNOWLEDGE_BANK_DO_NOT_DELETE
+filename: 35273-2020-信息安全技术 个人信息安全规范.pdf
+INFO:     127.0.0.1:54040 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:17:35 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:54040 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:17:35 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:17:35 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:54056 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:17:35 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:54056 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:17:35 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:18:16 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:48990 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:18:16 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:48990 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:18:16 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:18:17 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49004 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:18:17 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49004 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:18:17 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:19:10 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40544 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:19:10 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40544 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:19:10 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:19:11 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40554 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:19:11 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40554 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:19:11 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:19:22 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45834 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:19:22 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45834 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:19:22 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:19:30 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42724 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:19:30 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42724 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:19:30 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42724 - "POST /chat/knowledge_base_chat HTTP/1.1" 200 OK
+2023-10-10 08:19:30 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/chat/knowledge_base_chat "HTTP/1.1 200 OK"
+2023-10-10 08:19:30 | INFO | root | loading vector store in 'test/vector_store' from disk.
+{'kb_name': 'test', 'vs_type': 'faiss', 'embed_model': 'm3e-base', 'file_count': 8, 'create_time': datetime.datetime(2023, 10, 9, 15, 26, 12)}
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 90.26it/s]
+2023-10-10 08:19:30 | INFO | stdout | INFO:     127.0.0.1:46856 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+2023-10-10 08:19:30 | INFO | openai | message='OpenAI API response' path=http://0.0.0.0:20000/v1/chat/completions processing_ms=None request_id=None response_code=200
+2023-10-10 08:19:30 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20002/worker_generate_stream "HTTP/1.1 200 OK"
+2023-10-10 08:19:33 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+knowlodgebasename: test
+filename: 721df2eb-40b3-439e-bc94-6337aa00db7e7080a157-0859-418e-9f51-f4445c41ec5fAMI-附件1. 2p转售卖家信息收集表(1)-tax comment (1).xlsx
+knowlodgebasename: test
+filename: a55a75a8-57f5-4426-a2ed-f8c0c4989d3e7080a157-0859-418e-9f51-f4445c41ec5fAMI-附件1. 2p转售卖家信息收集表(1)-tax comment (1).xlsx
+knowlodgebasename: test
+filename: 721df2eb-40b3-439e-bc94-6337aa00db7e7080a157-0859-418e-9f51-f4445c41ec5fAMI-附件1. 2p转售卖家信息收集表(1)-tax comment (1).xlsx
+INFO:     127.0.0.1:36116 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:19:33 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36116 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:19:33 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:19:33 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36118 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:19:33 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:36118 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:19:33 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:20:05 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47464 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:20:05 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47464 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:20:05 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:47464 - "POST /chat/knowledge_base_chat HTTP/1.1" 200 OK
+2023-10-10 08:20:05 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/chat/knowledge_base_chat "HTTP/1.1 200 OK"
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 90.98it/s]
+2023-10-10 08:20:06 | INFO | stdout | INFO:     127.0.0.1:35404 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+2023-10-10 08:20:06 | INFO | openai | message='OpenAI API response' path=http://0.0.0.0:20000/v1/chat/completions processing_ms=None request_id=None response_code=200
+2023-10-10 08:20:06 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20002/worker_generate_stream "HTTP/1.1 200 OK"
+2023-10-10 08:20:16 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+knowlodgebasename: test
+filename: 721df2eb-40b3-439e-bc94-6337aa00db7e7080a157-0859-418e-9f51-f4445c41ec5fAMI-附件1. 2p转售卖家信息收集表(1)-tax comment (1).xlsx
+knowlodgebasename: test
+filename: a55a75a8-57f5-4426-a2ed-f8c0c4989d3e7080a157-0859-418e-9f51-f4445c41ec5fAMI-附件1. 2p转售卖家信息收集表(1)-tax comment (1).xlsx
+knowlodgebasename: test
+filename: 554086d2-de82-40a4-9c3a-46c95cec7aad385d3ea9-a8d2-45c2-9ccc-8ac5f2acc08eEspressif RainMaker 介绍 (1).pdf
+INFO:     127.0.0.1:53104 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:20:16 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53104 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:20:16 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:20:21 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53116 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:20:21 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53116 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:20:21 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:25:00 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44488 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:25:00 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44488 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:25:00 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:25:00 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44502 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:25:00 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:44502 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:25:00 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:25:06 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:48538 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:25:06 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:48538 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:25:06 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:25:07 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:48542 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:25:07 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:48542 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:25:07 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:25:21 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34632 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:25:21 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:34632 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:25:21 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:25:22 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59650 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:25:22 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59650 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:25:22 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:33:13 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59952 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:33:13 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59952 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:33:13 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:33:14 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59964 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:33:14 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59964 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:33:14 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:33:43 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57364 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:33:43 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57364 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:33:43 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:33:46 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57378 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:33:46 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57378 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:33:46 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:33:47 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57394 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:33:47 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57394 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:33:47 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:33:50 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57400 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:33:50 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57400 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:33:50 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57400 - "POST /chat/knowledge_base_chat HTTP/1.1" 200 OK
+2023-10-10 08:33:51 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/chat/knowledge_base_chat "HTTP/1.1 200 OK"
+2023-10-10 08:33:51 | INFO | root | loading vector store in 'LEGAL_KNOWLEDGE_BANK_DO_NOT_DELETE/vector_store' from disk.
+{'kb_name': 'LEGAL_KNOWLEDGE_BANK_DO_NOT_DELETE', 'vs_type': 'faiss', 'embed_model': 'm3e-base', 'file_count': 239, 'create_time': datetime.datetime(2023, 10, 9, 14, 0, 21)}
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 95.62it/s]
+2023-10-10 08:33:51 | INFO | stdout | INFO:     127.0.0.1:42896 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+2023-10-10 08:33:51 | INFO | openai | message='OpenAI API response' path=http://0.0.0.0:20000/v1/chat/completions processing_ms=None request_id=None response_code=200
+2023-10-10 08:33:51 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20002/worker_generate_stream "HTTP/1.1 200 OK"
+2023-10-10 08:33:52 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+knowlodgebasename: LEGAL_KNOWLEDGE_BANK_DO_NOT_DELETE
+filename: FW  回复   线上同意协议的效力.msg.docx
+knowlodgebasename: LEGAL_KNOWLEDGE_BANK_DO_NOT_DELETE
+filename: FW  回复   线上同意协议的效力.msg.docx
+knowlodgebasename: LEGAL_KNOWLEDGE_BANK_DO_NOT_DELETE
+filename: FW  回复   线上同意协议的效力.msg.docx
+INFO:     127.0.0.1:57404 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:33:52 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:57404 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:33:52 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:33:53 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50482 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:33:53 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50482 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:33:53 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:34:26 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37898 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:34:26 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37898 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:34:26 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:34:26 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37906 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:34:26 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37906 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:34:26 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:34:53 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45316 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:34:53 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45316 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:34:53 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:34:53 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45322 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:34:53 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45322 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:34:53 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:34:58 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45338 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:34:58 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45338 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:34:58 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45338 - "POST /chat/knowledge_base_chat HTTP/1.1" 200 OK
+2023-10-10 08:34:58 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/chat/knowledge_base_chat "HTTP/1.1 200 OK"
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 97.55it/s]
+2023-10-10 08:34:58 | INFO | stdout | INFO:     127.0.0.1:39552 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+2023-10-10 08:34:58 | INFO | openai | message='OpenAI API response' path=http://0.0.0.0:20000/v1/chat/completions processing_ms=None request_id=None response_code=200
+2023-10-10 08:34:58 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20002/worker_generate_stream "HTTP/1.1 200 OK"
+2023-10-10 08:34:59 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+knowlodgebasename: LEGAL_KNOWLEDGE_BANK_DO_NOT_DELETE
+filename: FW  回复   线上同意协议的效力.msg.docx
+knowlodgebasename: LEGAL_KNOWLEDGE_BANK_DO_NOT_DELETE
+filename: FW  回复   线上同意协议的效力.msg.docx
+knowlodgebasename: LEGAL_KNOWLEDGE_BANK_DO_NOT_DELETE
+filename: FW  回复   线上同意协议的效力.msg.docx
+INFO:     127.0.0.1:45352 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:34:59 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45352 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:34:59 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:35:00 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45362 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:35:00 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:45362 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:35:00 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:35:17 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37154 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:35:17 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37154 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:35:17 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:35:22 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37162 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:35:22 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:37162 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:35:22 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+error
+error
+error
+error
+error
+error
+received input message:
+{'history': [],
+ 'knowledge_base_name': 'LEGAL_KNOWLEDGE_BANK_DO_NOT_DELETE',
+ 'local_doc_url': False,
+ 'model_name': 'chatglm2-6b-int4',
+ 'prompt_name': 'knowledge_base_chat',
+ 'query': 'hi',
+ 'score_threshold': 1.0,
+ 'stream': True,
+ 'temperature': 0.2,
+ 'top_k': 3}
+{'answer': '根据'}
+{'answer': '已知'}
+{'answer': '信息'}
+{'answer': '，'}
+{'answer': '无法'}
+{'answer': '回答'}
+{'answer': '该'}
+{'answer': '问题'}
+{'answer': '。'}
+{'docs': [...]}
+received input message:
+{'history': [{'content': '根据已知信息，无法回答该问题。', 'role': 'assistant'}],
+ 'knowledge_base_name': 'LEGAL_KNOWLEDGE_BANK_DO_NOT_DELETE',
+ 'local_doc_url': False,
+ 'model_name': 'chatglm2-6b-int4',
+ 'prompt_name': 'knowledge_base_chat',
+ 'query': '个人信息',
+ 'score_threshold': 1.0,
+ 'stream': True,
+ 'temperature': 0.2,
+ 'top_k': 3}
+{'answer': '个人信息'}
+{'answer': '是指'}
+{'answer': '以'}
+{'answer': '电子'}
+{'answer': '或者其他'}
+{'answer': '方式'}
+{'answer': '记录'}
+{'answer': '的'}
+{'answer': '能够'}
+{'answer': '单独'}
+{'answer': '或者'}
+{'answer': '与其他'}
+{'answer': '信息'}
+{'answer': '结合'}
+{'answer': '识别'}
+{'answer': '自然'}
+{'answer': '人'}
+{'answer': '个人'}
+{'answer': '身份'}
+{'answer': '的各种'}
+{'answer': '信息'}
+{'answer': '，'}
+{'answer': '包括但不限'}
+{'answer': '于'}
+{'answer': '自然'}
+{'answer': '人的'}
+{'answer': '姓名'}
+{'answer': '、'}
+{'answer': '出生'}
+{'answer': '日期'}
+{'answer': '、'}
+{'answer': '身份证'}
+{'answer': '件'}
+{'answer': '号码'}
+{'answer': '、'}
+{'answer': '个人'}
+{'answer': '生物'}
+{'answer': '识别'}
+{'answer': '信息'}
+{'answer': '、'}
+{'answer': '住'}
+{'answer': '址'}
+{'answer': '、'}
+{'answer': '电话'}
+{'answer': '号码'}
+{'answer': '等'}
+{'answer': '。'}
+{'docs': [...]}
+received input message:
+{'history': [],
+ 'knowledge_base_name': 'test',
+ 'local_doc_url': False,
+ 'model_name': 'chatglm2-6b-int4',
+ 'prompt_name': 'knowledge_base_chat',
+ 'query': '产品',
+ 'score_threshold': 1.0,
+ 'stream': True,
+ 'temperature': 0.2,
+ 'top_k': 3}
+{'answer': '根据'}
+{'answer': '已知'}
+{'answer': '信息'}
+{'answer': '，'}
+{'answer': '我'}
+{'answer': '无法'}
+{'answer': '回答'}
+{'answer': '关于'}
+{'answer': '产品'}
+{'answer': '的问题'}
+{'answer': '，'}
+{'answer': '因为'}
+{'answer': '这个问题'}
+{'answer': '缺乏'}
+{'answer': '足够的'}
+{'answer': '上下'}
+{'answer': '文'}
+{'answer': '。'}
+{'answer': '如果您'}
+{'answer': '想'}
+{'answer': '了解'}
+{'answer': '关于'}
+{'answer': '产品'}
+{'answer': '的问题'}
+{'answer': '，'}
+{'answer': '请'}
+{'answer': '提供'}
+{'answer': '更多信息'}
+{'answer': '，'}
+{'answer': '以便'}
+{'answer': '我'}
+{'answer': '能够'}
+{'answer': '为您'}
+{'answer': '提供'}
+{'answer': '有'}
+{'answer': '用的'}
+{'answer': '帮助'}
+{'answer': '。'}
+{'docs': [...]}
+received input message:
+{'history': [{'content': '根据已知信息，我无法回答关于产品的问题，因为这个问题缺乏足够的上下文。如果您想了解关于产品的问题，请提供更多信息，以便我能够为您提供有用的帮助。',
+              'role': 'assistant'}],
+ 'knowledge_base_name': 'test',
+ 'local_doc_url': False,
+ 'model_name': 'chatglm2-6b-int4',
+ 'prompt_name': 'knowledge_base_chat',
+ 'query': 'esp产品',
+ 'score_threshold': 1.0,
+ 'stream': True,
+ 'temperature': 0.2,
+ 'top_k': 3}
+{'answer': 'ESP'}
+{'answer': ' Rain'}
+{'answer': 'M'}
+{'answer': 'aker'}
+{'answer': '®'}
+{'answer': ' 是一款'}
+{'answer': '基于'}
+{'answer': ' AWS'}
+{'answer': ' 云'}
+{'answer': '深度'}
+{'answer': '集'}
+{'answer': '成的'}
+{'answer': ' AI'}
+{'answer': 'oT'}
+{'answer': ' 标准'}
+{'answer': '云'}
+{'answer': '产品'}
+{'answer': '，'}
+{'answer': '旨在'}
+{'answer': '为'}
+{'answer': '客户'}
+{'answer': '私有'}
+{'answer': '化'}
+{'answer': '部署'}
+{'answer': '提供'}
+{'answer': '一站式'}
+{'answer': '免'}
+{'answer': '开发'}
+{'answer': '免'}
+{'answer': '运维'}
+{'answer': '的'}
+{'answer': ' AI'}
+{'answer': 'oT'}
+{'answer': ' 解决方案'}
+{'answer': '，'}
+{'answer': '降低'}
+{'answer': '研发'}
+{'answer': '成本'}
+{'answer': '并'}
+{'answer': '加快'}
+{'answer': '产品'}
+{'answer': '上市'}
+{'answer': '速度'}
+{'answer': '。'}
+{'answer': '它'}
+{'answer': '打通'}
+{'answer': '了'}
+{'answer': '底层'}
+{'answer': '芯片'}
+{'answer': '到'}
+{'answer': '上层'}
+{'answer': '软件'}
+{'answer': '应用'}
+{'answer': '全'}
+{'answer': '链'}
+{'answer': '路'}
+{'answer': '，'}
+{'answer': '包含'}
+{'answer': '所有'}
+{'answer': '乐'}
+{'answer': '鑫'}
+{'answer': '芯片'}
+{'answer': '和'}
+{'answer': '模'}
+{'answer': '组'}
+{'answer': '、'}
+{'answer': '设备'}
+{'answer': '固'}
+{'answer': '件'}
+{'answer': '、'}
+{'answer': '第三方'}
+{'answer': '语音'}
+{'answer': '助手'}
+{'answer': '集成'}
+{'answer': '、'}
+{'answer': '手机'}
+{'answer': ' AP'}
+{'answer': 'P'}
+{'answer': ' 和'}
+{'answer': '云'}
+{'answer': '后台'}
+{'answer': '，'}
+{'answer': '有助于'}
+{'answer': '节省'}
+{'answer': '客户'}
+{'answer': '对'}
+{'answer': '云'}
+{'answer': '方案'}
+{'answer': '的大量'}
+{'answer': '投入'}
+{'answer': '，'}
+{'answer': '从而'}
+{'answer': '更'}
+{'answer': '专注于'}
+{'answer': '创造'}
+{'answer': '企业'}
+{'answer': '核心'}
+{'answer': '价值'}
+{'answer': '产品'}
+{'answer': '。'}
+{'answer': '\n\nES'}
+{'answer': 'P'}
+{'answer': ' Rain'}
+{'answer': 'M'}
+{'answer': 'aker'}
+{'answer': '®'}
+{'answer': ' 可以帮助'}
+{'answer': '客户'}
+{'answer': '实现'}
+{'answer': '短时间内'}
+{'answer': '实现'}
+{'answer': '产品'}
+{'answer': '多样性'}
+{'answer': '探索'}
+{'answer': '和创新'}
+{'answer': '，'}
+{'answer': '提升'}
+{'answer': '品牌'}
+{'answer': '知名度'}
+{'answer': '。'}
+{'answer': '此外'}
+{'answer': '，'}
+{'answer': '它可以'}
+{'answer': '以'}
+{'answer': '较'}
+{'answer': '少的'}
+{'answer': '投入'}
+{'answer': '显著'}
+{'answer': '增加'}
+{'answer': '固'}
+{'answer': '件'}
+{'answer': '、'}
+{'answer': '测试'}
+{'answer': '和'}
+{'answer': '制造'}
+{'answer': '的开发'}
+{'answer': '速度'}
+{'answer': '。'}
+{'answer': '对于'}
+{'answer': '工厂'}
+{'answer': '客户'}
+{'answer': '，'}
+{'answer': '它可以'}
+{'answer': '形成'}
+{'answer': '有'}
+{'answer': '竞争力的'}
+{'answer': '解决方案'}
+{'answer': '，'}
+{'answer': '高'}
+{'answer': '投资'}
+{'answer': '回报'}
+{'answer': '率'}
+{'answer': '。'}
+{'answer': '对于'}
+{'answer': '解决方案'}
+{'answer': '客户'}
+{'answer': '，'}
+{'answer': '它可以'}
+{'answer': '赋能'}
+{'answer': '产品'}
+{'answer': '差异化'}
+{'answer': '研发'}
+{'answer': '，'}
+{'answer': '触'}
+{'answer': '达'}
+{'answer': '终端'}
+{'answer': '产品'}
+{'answer': '及'}
+{'answer': '用户'}
+{'answer': '。'}
+{'docs': [...]}
+received input message:
+{'history': [],
+ 'knowledge_base_name': 'LEGAL_KNOWLEDGE_BANK_DO_NOT_DELETE',
+ 'local_doc_url': False,
+ 'model_name': 'chatglm2-6b-int4',
+ 'prompt_name': 'knowledge_base_chat',
+ 'query': 'hi',
+ 'score_threshold': 1.0,
+ 'stream': True,
+ 'temperature': 0.2,
+ 'top_k': 3}
+{'answer': '根据'}
+{'answer': '已知'}
+{'answer': '信息'}
+{'answer': '，'}
+{'answer': '无法'}
+{'answer': '回答'}
+{'answer': '该'}
+{'answer': '问题'}
+{'answer': '。'}
+{'docs': [...]}
+received input message:
+{'history': [],
+ 'knowledge_base_name': 'LEGAL_KNOWLEDGE_BANK_DO_NOT_DELETE',
+ 'local_doc_url': False,
+ 'model_name': 'chatglm2-6b-int4',
+ 'prompt_name': 'knowledge_base_chat',
+ 'query': 'hi',
+ 'score_threshold': 1.0,
+ 'stream': True,
+ 'temperature': 0.2,
+ 'top_k': 3}
+{'answer': '根据'}
+{'answer': '已知'}
+{'answer': '信息'}
+{'answer': '，'}
+{'answer': '无法'}
+{'answer': '回答'}
+{'answer': '该'}
+{'answer': '问题'}
+{'answer': '。'}
+{'docs': [...]}
+received input message:
+{'history': [{'content': '根据已知信息，无法回答该问题。', 'role': 'assistant'}],
+ 'knowledge_base_name': 'test',
+ 'local_doc_url': False,
+ 'model_name': 'chatglm2-6b-int4',
+ 'prompt_name': 'knowledge_base_chat',
+ 'query': 'hi',
+ INFO:     127.0.0.1:37162 - "POST /chat/knowledge_base_chat HTTP/1.1" 200 OK
+2023-10-10 08:35:22 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/chat/knowledge_base_chat "HTTP/1.1 200 OK"
+2023-10-10 08:35:22 | INFO | root | loading vector store in 'test/vector_store' from disk.
+{'kb_name': 'test', 'vs_type': 'faiss', 'embed_model': 'm3e-base', 'file_count': 8, 'create_time': datetime.datetime(2023, 10, 9, 15, 26, 12)}
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 99.28it/s]
+2023-10-10 08:35:22 | INFO | stdout | INFO:     127.0.0.1:50224 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+2023-10-10 08:35:22 | INFO | openai | message='OpenAI API response' path=http://0.0.0.0:20000/v1/chat/completions processing_ms=None request_id=None response_code=200
+2023-10-10 08:35:22 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20002/worker_generate_stream "HTTP/1.1 200 OK"
+2023-10-10 08:35:23 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+knowlodgebasename: test
+filename: 721df2eb-40b3-439e-bc94-6337aa00db7e7080a157-0859-418e-9f51-f4445c41ec5fAMI-附件1. 2p转售卖家信息收集表(1)-tax comment (1).xlsx
+knowlodgebasename: test
+filename: a55a75a8-57f5-4426-a2ed-f8c0c4989d3e7080a157-0859-418e-9f51-f4445c41ec5fAMI-附件1. 2p转售卖家信息收集表(1)-tax comment (1).xlsx
+knowlodgebasename: test
+filename: 721df2eb-40b3-439e-bc94-6337aa00db7e7080a157-0859-418e-9f51-f4445c41ec5fAMI-附件1. 2p转售卖家信息收集表(1)-tax comment (1).xlsx
+INFO:     127.0.0.1:33092 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:35:23 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33092 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:35:23 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:35:23 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33100 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:35:23 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33100 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:35:23 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:35:30 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33106 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:35:30 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:33106 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:35:30 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:35:50 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42058 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:35:50 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42058 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:35:50 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:42058 - "POST /chat/search_engine_chat HTTP/1.1" 200 OK
+2023-10-10 08:35:50 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/chat/search_engine_chat "HTTP/1.1 200 OK"
+2023-10-10 08:35:51 | INFO | httpx | HTTP Request: POST https://duckduckgo.com "HTTP/2 200 OK"
+2023-10-10 08:35:52 | INFO | httpx | HTTP Request: GET https://links.duckduckgo.com/d.js?q=%E6%9C%80%E6%96%B0%E7%9A%84%E4%BB%A5%E8%89%B2%E5%88%97%E5%B1%80%E5%8A%BF%E6%98%AF%E6%80%8E%E4%B9%88%E6%A0%B7%E7%9A%84&kl=wt-wt&l=wt-wt&s=0&df=y&vqd=4-293816514128006112466711757961188889281&o=json&sp=0&ex=-1 "HTTP/2 200 OK"
+2023-10-10 08:35:52 | INFO | stdout | INFO:     127.0.0.1:57420 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+2023-10-10 08:35:52 | INFO | openai | message='OpenAI API response' path=http://0.0.0.0:20000/v1/chat/completions processing_ms=None request_id=None response_code=200
+2023-10-10 08:35:52 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20002/worker_generate_stream "HTTP/1.1 200 OK"
+2023-10-10 08:35:59 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41918 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:35:59 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41918 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:35:59 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:36:00 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41922 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:36:00 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41922 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:36:00 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:36:20 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41202 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:36:20 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41202 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:36:20 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:41202 - "POST /chat/search_engine_chat HTTP/1.1" 200 OK
+2023-10-10 08:36:20 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/chat/search_engine_chat "HTTP/1.1 200 OK"
+2023-10-10 08:36:20 | INFO | httpx | HTTP Request: POST https://duckduckgo.com "HTTP/2 200 OK"
+2023-10-10 08:36:22 | INFO | httpx | HTTP Request: GET https://links.duckduckgo.com/d.js?q=%E6%9C%80%E6%96%B0%E7%9A%84%E4%BB%A5%E8%89%B2%E5%88%97%E5%B1%80%E5%8A%BF%E6%98%AF%E6%80%8E%E4%B9%88%E6%A0%B7%E7%9A%84%EF%BC%8C%E6%AD%BB%E4%BA%86%E5%A4%9A%E5%B0%91%E4%BA%BA&kl=wt-wt&l=wt-wt&s=0&df=y&vqd=4-112285580289477781751187998869315785228&o=json&sp=0&ex=-1 "HTTP/2 200 OK"
+2023-10-10 08:36:22 | INFO | stdout | INFO:     127.0.0.1:59968 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+2023-10-10 08:36:22 | INFO | openai | message='OpenAI API response' path=http://0.0.0.0:20000/v1/chat/completions processing_ms=None request_id=None response_code=200
+2023-10-10 08:36:22 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20002/worker_generate_stream "HTTP/1.1 200 OK"
+2023-10-10 08:36:29 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55960 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:36:29 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55960 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:36:29 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:36:30 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55976 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:36:30 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:55976 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:36:30 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:36:49 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58242 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:36:49 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58242 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:36:49 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:36:49 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58252 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:36:49 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58252 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:36:49 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:36:57 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40206 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:36:57 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40206 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:36:57 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:40206 - "POST /chat/search_engine_chat HTTP/1.1" 200 OK
+2023-10-10 08:36:57 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/chat/search_engine_chat "HTTP/1.1 200 OK"
+2023-10-10 08:36:57 | INFO | httpx | HTTP Request: POST https://duckduckgo.com "HTTP/2 200 OK"
+2023-10-10 08:36:59 | INFO | httpx | HTTP Request: GET https://links.duckduckgo.com/d.js?q=%E6%9C%80%E8%BF%91%E7%9A%84%E4%BB%A5%E8%89%B2%E5%88%97%E5%B1%80%E5%8A%BF%E6%98%AF%E6%80%8E%E4%B9%88%E6%A0%B7%E7%9A%84%EF%BC%8C%E6%AD%BB%E4%BA%86%E5%A4%9A%E5%B0%91%E4%BA%BA&kl=wt-wt&l=wt-wt&s=0&df=y&vqd=4-20004269423507120095425516111677469475&o=json&sp=0&ex=-1 "HTTP/2 200 OK"
+2023-10-10 08:36:59 | INFO | stdout | INFO:     127.0.0.1:51706 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+2023-10-10 08:36:59 | INFO | openai | message='OpenAI API response' path=http://0.0.0.0:20000/v1/chat/completions processing_ms=None request_id=None response_code=200
+2023-10-10 08:36:59 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20002/worker_generate_stream "HTTP/1.1 200 OK"
+'score_threshold': 1.0,
+ 'stream': True,
+ 'temperature': 0.2,
+ 'top_k': 3}
+{'answer': '根据'}
+{'answer': '已知'}
+{'answer': '信息'}
+{'answer': '，'}
+{'answer': '无法'}
+{'answer': '回答'}
+{'answer': '该'}
+{'answer': '问题'}
+{'answer': '。'}
+{'docs': [...]}
+received input message:
+{'history': [{'content': '根据已知信息，无法回答该问题。', 'role': 'assistant'}],
+ 'model_name': 'chatglm2-6b-int4',
+ 'prompt_name': 'knowledge_base_chat',
+ 'query': '最新的以色列局势是怎么样的',
+ 'search_engine_name': 'duckduckgo',
+ 'stream': True,
+ 'temperature': 0.2,
+ 'top_k': 3}
+{'answer': '据'}
+{'answer': '已知'}
+{'answer': '信息'}
+{'answer': '，'}
+{'answer': '以色列'}
+{'answer': '和'}
+{'answer': '巴勒斯坦'}
+{'answer': '之间的'}
+{'answer': '冲突'}
+{'answer': '最近'}
+{'answer': '升级'}
+{'answer': '，'}
+{'answer': '联合国'}
+{'answer': '高级'}
+{'answer': '官员'}
+{'answer': '正在'}
+{'answer': '与'}
+{'answer': '关键'}
+{'answer': '行动'}
+{'answer': '者'}
+{'answer': '进行'}
+{'answer': '接触'}
+{'answer': '，'}
+{'answer': '安'}
+{'answer': '理'}
+{'answer': '会在'}
+{'answer': '周'}
+{'answer': '日下午'}
+{'answer': '举行'}
+{'answer': '紧急'}
+{'answer': '闭'}
+{'answer': '门'}
+{'answer': '磋商'}
+{'answer': '会议'}
+{'answer': '。'}
+{'answer': '同时'}
+{'answer': '，'}
+{'answer': '联合国'}
+{'answer': '维'}
+{'answer': '和'}
+{'answer': '人员'}
+{'answer': '发现'}
+{'answer': '以色列'}
+{'answer': '-'}
+{'answer': '黎'}
+{'answer': '巴'}
+{'answer': '嫩'}
+{'answer': '边境'}
+{'answer': '有'}
+{'answer': '火箭'}
+{'answer': '弹'}
+{'answer': '发射'}
+{'answer': '和'}
+{'answer': '反击'}
+{'answer': '炮'}
+{'answer': '火'}
+{'answer': '。'}
+{'answer': '以色列'}
+{'answer': '安全'}
+{'answer': '部队'}
+{'answer': '已'}
+{'answer': '杀害'}
+{'answer': '了'}
+{'answer': '6'}
+{'answer': '名'}
+{'answer': '巴勒斯坦'}
+{'answer': '人'}
+{'answer': '，'}
+{'answer': '其中包括'}
+{'answer': '2'}
+{'answer': '名'}
+{'answer': '儿童'}
+{'answer': '。'}
+{'answer': '4'}
+{'answer': '4'}
+{'answer': '名'}
+{'answer': '巴勒斯坦'}
+{'answer': '青年'}
+{'answer': '和'}
+{'answer': '1'}
+{'answer': '名'}
+{'answer': '以色列'}
+{'answer': '儿童'}
+{'answer': '丧'}
+{'answer': '生'}
+{'answer': '。'}
+{'answer': '以色列'}
+{'answer': '于'}
+{'answer': '1'}
+{'answer': '0'}
+{'answer': '月'}
+{'answer': '7'}
+{'answer': '日'}
+{'answer': '宣布'}
+{'answer': '全国'}
+{'answer': '进入'}
+{'answer': '紧急'}
+{'answer': '状态'}
+{'answer': '，'}
+{'answer': '防止'}
+{'answer': '境内'}
+{'answer': '阿拉伯'}
+{'answer': '人'}
+{'answer': '加入'}
+{'answer': '冲突'}
+{'answer': '。'}
+{'answer': '阿拉伯'}
+{'answer': '人'}
+{'answer': '约占'}
+{'answer': '以色列'}
+{'answer': '总'}
+{'answer': '人口的'}
+{'answer': '2'}
+{'answer': '1'}
+{'answer': '%。'}
+{'docs': [...]}
+received input message:
+{'history': [{'content': '据已知信息，以色列和巴勒斯坦之间的冲突最近升级，联合国高级官员正在与关键行动者进行接触，安理会在周日下午举行紧急闭门磋商会议。同时，联合国维和人员发现以色列-黎巴嫩边境有火箭弹发射和反击炮火。以色列安全部队已杀害了6名巴勒斯坦人，其中包括2名儿童。44名巴勒斯坦青年和1名以色列儿童丧生。以色列于10月7日宣布全国进入紧急状态，防止境内阿拉伯人加入冲突。阿拉伯人约占以色列总人口的21%。',
+              'role': 'assistant'}],
+ 'model_name': 'chatglm2-6b-int4',
+ 'prompt_name': 'knowledge_base_chat',
+ 'query': '最新的以色列局势是怎么样的，死了多少人',
+ 'search_engine_name': 'duckduckgo',
+ 'stream': True,
+ 'temperature': 0.2,
+ 'top_k': 3}
+{'answer': '据'}
+{'answer': '已知'}
+{'answer': '信息'}
+{'answer': '，'}
+{'answer': '以色列'}
+{'answer': '和'}
+{'answer': '巴勒斯坦'}
+{'answer': '之间的'}
+{'answer': '冲突'}
+{'answer': '最近'}
+{'answer': '升级'}
+{'answer': '，'}
+{'answer': '联合国'}
+{'answer': '高级'}
+{'answer': '官员'}
+{'answer': '正在'}
+{'answer': '与'}
+{'answer': '关键'}
+{'answer': '行动'}
+{'answer': '者'}
+{'answer': '进行'}
+{'answer': '接触'}
+{'answer': '，'}
+{'answer': '安'}
+{'answer': '理'}
+{'answer': '会在'}
+{'answer': '周'}
+{'answer': '日下午'}
+{'answer': '举行'}
+{'answer': '紧急'}
+{'answer': '闭'}
+{'answer': '门'}
+{'answer': '磋商'}
+{'answer': '会议'}
+{'answer': '。'}
+{'answer': '同时'}
+{'answer': '，'}
+{'answer': '联合国'}
+{'answer': '维'}
+{'answer': '和'}
+{'answer': '人员'}
+{'answer': '发现'}
+{'answer': '以色列'}
+{'answer': '-'}
+{'answer': '黎'}
+{'answer': '巴'}
+{'answer': '嫩'}
+{'answer': '边境'}
+{'answer': '有'}
+{'answer': '火箭'}
+{'answer': '弹'}
+{'answer': '发射'}
+{'answer': '和'}
+{'answer': '反击'}
+{'answer': '炮'}
+{'answer': '火'}
+{'answer': '。'}
+{'answer': '以色列'}
+{'answer': '安全'}
+{'answer': '部队'}
+{'answer': '已'}
+{'answer': '杀害'}
+{'answer': '了'}
+{'answer': '6'}
+{'answer': '名'}
+{'answer': '巴勒斯坦'}
+{'answer': '人'}
+{'answer': '，'}
+{'answer': '其中包括'}
+{'answer': '2'}
+{'answer': '名'}
+{'answer': '儿童'}
+{'answer': '。'}
+{'answer': '4'}
+{'answer': '4'}
+{'answer': '名'}
+{'answer': '巴勒斯坦'}
+{'answer': '青年'}
+{'answer': '和'}
+{'answer': '1'}
+{'answer': '名'}
+{'answer': '以色列'}
+{'answer': '儿童'}
+{'answer': '丧'}
+{'answer': '生'}
+{'answer': '。'}
+{'answer': '以色列'}
+{'answer': '于'}
+{'answer': '1'}
+{'answer': '0'}
+{'answer': '月'}
+{'answer': '7'}
+{'answer': '日'}
+{'answer': '宣布'}
+{'answer': '全国'}
+{'answer': '进入'}
+{'answer': '紧急'}
+{'answer': '状态'}
+{'answer': '，'}
+{'answer': '防止'}
+{'answer': '境内'}
+{'answer': '阿拉伯'}
+{'answer': '人'}
+{'answer': '加入'}
+{'answer': '冲突'}
+{'answer': '。'}
+{'answer': '阿拉伯'}
+{'answer': '人'}
+{'answer': '约占'}
+{'answer': '以色列'}
+{'answer': '总'}
+{'answer': '人口的'}
+{'answer': '2'}
+{'answer': '1'}
+{'answer': '%。'}
+{'docs': [...]}
+received input message:
+{'history': [{'content': '据已知信息，以色列和巴勒斯坦之间的冲突最近升级，联合国高级官员正在与关键行动者进行接触，安理会在周日下午举行紧急闭门磋商会议。同时，联合国维和人员发现以色列-黎巴嫩边境有火箭弹发射和反击炮火。以色列安全部队已杀害了6名巴勒斯坦人，其中包括2名儿童。44名巴勒斯坦青年和1名以色列儿童丧生。以色列于10月7日宣布全国进入紧急状态，防止境内阿拉伯人加入冲突。阿拉伯人约占以色列总人口的21%。',
+              'role': 'assistant'}],
+ 'model_name': 'chatglm2-6b-int4',
+ 'prompt_name': 'knowledge_base_chat',
+ 'query': '最近的以色列局势是怎么样的，死了多少人',
+ 'search_engine_name': 'duckduckgo',
+ 'stream': True,
+ 'temperature': 0.2,
+ 'top_k': 5}
+{'answer': '据'}
+{'answer': '已知'}
+{'answer': '信息'}
+{'answer': '，'}
+{'answer': '以色列'}
+{'answer': '和'}
+{'answer': '巴勒斯坦'}
+{'answer': '之间的'}
+{'answer': '冲突'}
+{'answer': '最近'}
+{'answer': '升级'}
+{'answer': '，'}
+{'answer': '导致'}
+{'answer': '多名'}
+{'answer': '巴勒斯坦'}
+{'answer': '人和'}
+{'answer': '以色列'}
+{'answer': '人'}
+{'answer': '受伤'}
+{'answer': '。'}
+{'answer': '据报道'}
+{'answer': '，'}
+{'answer': '以色列'}
+{'answer': '军队'}
+{'answer': '在'}
+{'answer': '约'}
+{'answer': '旦'}
+{'answer': '河西'}
+{'answer': '岸'}
+{'answer': '被'}
+{'answer': '占领'}
+{'answer': '土'}
+{'answer': '对'}
+{'answer': '巴勒斯坦'}
+{'answer': '人'}
+{'answer': '过度'}
+{'answer': '使用'}
+{'answer': '武力'}
+{'answer': '，'}
+{'answer': '导致'}
+{'answer': '2'}
+{'answer': '0'}
+{'answer': '2'}
+{'answer': '2'}
+{'answer': '年'}
+{'answer': '成为'}
+{'answer': '自'}
+{'answer': '联合国'}
+{'answer': '2'}
+{'answer': '0'}
+{'answer': '0'}
+{'answer': '5'}
+{'answer': '年开始'}
+{'answer': '系统'}
+{'answer': '地'}
+{'answer': '记录'}
+{'answer': '死亡'}
+{'answer': '人数'}
+{'answer': '以来'}
+{'answer': '，'}
+{'answer': '巴勒斯坦'}2023-10-10 08:37:05 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49574 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:37:05 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49574 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:37:05 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:37:13 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59096 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:37:13 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59096 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:37:13 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:37:43 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56368 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:37:43 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56368 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:37:43 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:37:43 | INFO | httpx | HTTP Request: POST http://0.0.0.0:20001/list_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56380 - "POST /llm_model/list_running_models HTTP/1.1" 200 OK
+2023-10-10 08:37:43 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_running_models "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56380 - "POST /llm_model/list_config_models HTTP/1.1" 200 OK
+2023-10-10 08:37:43 | INFO | httpx | HTTP Request: POST http://0.0.0.0:7861/llm_model/list_config_models "HTTP/1.1 200 OK"
+2023-10-10 08:40:12 | WARNING | root | Sending SIGKILL to {'zhipu-api': <Process name='api_worker - zhipu-api (3061)' pid=3061 parent=2956 started daemon>, 'xinghuo-api': <Process name='api_worker - xinghuo-api (3062)' pid=3062 parent=2956 started daemon>, 'qianfan-api': <Process name='api_worker - qianfan-api (3063)' pid=3063 parent=2956 started daemon>, 'qwen-api': <Process name='api_worker - qwen-api (3064)' pid=3064 parent=2956 started daemon>, 'minimax-api': <Process name='api_worker - minimax-api (3065)' pid=3065 parent=2956 started daemon>, 'fangzhou-api': <Process name='api_worker - fangzhou-api (3066)' pid=3066 parent=2956 started daemon>}
+2023-10-10 08:40:12 | WARNING | root | Sending SIGKILL to {'chatglm2-6b-int4': <Process name='model_worker - chatglm2-6b-int4 (3060)' pid=3060 parent=2956 started daemon>}
+
+{'answer': '被'}
+{'answer': '占领'}
+{'answer': '土'}
+{'answer': '伤亡'}
+{'answer': '最'}
+{'answer': '惨'}
+{'answer': '重'}
+{'answer': '的一年'}
+{'answer': '。'}
+{'answer': '截至目前'}
+{'answer': '为止'}
+{'answer': '，'}
+{'answer': '今年'}
+{'answer': '已有'}
+{'answer': '1'}
+{'answer': '5'}
+{'answer': '0'}
+{'answer': '名'}
+{'answer': '巴勒斯坦'}
+{'answer': '人和'}
+{'answer': '2'}
+{'answer': '0'}
+{'answer': '多名'}
+{'answer': '以色列'}
+{'answer': '人在'}
+{'answer': '约'}
+{'answer': '旦'}
+{'answer': '河西'}
+{'answer': '岸'}
+{'answer': '和'}
+{'answer': '以色列'}
+{'answer': '被'}
+{'answer': '杀害'}
+{'answer': '。'}
+{'docs': [...]}
+  Stopping...
+INFO:     Shutting down
+2023-10-10 08:40:12 | WARNING | root | Sending SIGKILL to <Process name='controller (3040)' pid=3040 parent=2956 started daemon>
+2023-10-10 08:40:12 | WARNING | root | Sending SIGKILL to <Process name='openai_api (3059)' pid=3059 parent=2956 started daemon>
+2023-10-10 08:40:12 | WARNING | root | Sending SIGKILL to <Process name='API Server (3256)' pid=3256 parent=2956 started daemon>
+2023-10-10 08:40:12 | WARNING | root | Sending SIGKILL to <Process name='WEBUI Server (3281)' pid=3281 parent=2956 stopped exitcode=-SIGTERM daemon>
+2023-10-10 08:40:12 | INFO | root | Process status: {'zhipu-api': <Process name='api_worker - zhipu-api (3061)' pid=3061 parent=2956 started daemon>, 'xinghuo-api': <Process name='api_worker - xinghuo-api (3062)' pid=3062 parent=2956 started daemon>, 'qianfan-api': <Process name='api_worker - qianfan-api (3063)' pid=3063 parent=2956 started daemon>, 'qwen-api': <Process name='api_worker - qwen-api (3064)' pid=3064 parent=2956 started daemon>, 'minimax-api': <Process name='api_worker - minimax-api (3065)' pid=3065 parent=2956 started daemon>, 'fangzhou-api': <Process name='api_worker - fangzhou-api (3066)' pid=3066 parent=2956 stopped exitcode=-SIGKILL daemon>}
+2023-10-10 08:40:12 | INFO | root | Process status: {'chatglm2-6b-int4': <Process name='model_worker - chatglm2-6b-int4 (3060)' pid=3060 parent=2956 started daemon>}
+2023-10-10 08:40:12 | INFO | root | Process status: <Process name='controller (3040)' pid=3040 parent=2956 started daemon>
+2023-10-10 08:40:12 | INFO | root | Process status: <Process name='openai_api (3059)' pid=3059 parent=2956 started daemon>
+2023-10-10 08:40:12 | INFO | root | Process status: <Process name='API Server (3256)' pid=3256 parent=2956 started daemon>
+2023-10-10 08:40:12 | INFO | root | Process status: <Process name='WEBUI Server (3281)' pid=3281 parent=2956 stopped exitcode=-SIGTERM daemon>
+
+
+==============================Langchain-Chatchat Configuration==============================
+操作系统：Linux-5.15.0-1045-aws-x86_64-with-glibc2.31.
+python版本：3.10.12 | packaged by conda-forge | (main, Jun 23 2023, 22:40:32) [GCC 12.3.0]
+项目版本：v0.2.5
+langchain版本：0.0.310. fastchat版本：0.2.29
+
+
+当前使用的分词器：RecursiveCharacterTextSplitter
+当前启动的LLM模型：['chatglm2-6b-int4'] @ cuda
+{'device': 'cuda',
+ 'host': '0.0.0.0',
+ 'infer_turbo': 'vllm',
+ 'model_path': 'THUDM/chatglm2-6b-int4',
+ 'port': 20002}
+当前Embbedings模型： m3e-base @ cuda
+
+
+服务端运行信息：
+    OpenAI API Server: http://0.0.0.0:20000/v1
+    Chatchat  API  Server: http://0.0.0.0:7861
+    Chatchat WEBUI Server: http://0.0.0.0:8501
+==============================Langchain-Chatchat Configuration==============================
+
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Langchain-Chatchat/startup.py", line 838, in <module>
+    loop.run_until_complete(start_main_server())
+  File "/opt/conda/envs/Langchain-Chatchat/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/conda/envs/Langchain-Chatchat/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/conda/envs/Langchain-Chatchat/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+  File "/opt/conda/envs/Langchain-Chatchat/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/ubuntu/Langchain-Chatchat/startup.py", line 736, in start_main_server
+    cmd = queue.get() # 收到切换模型的消息
+  File "<string>", line 2, in get
+  File "/opt/conda/envs/Langchain-Chatchat/lib/python3.10/multiprocessing/managers.py", line 818, in _callmethod
+    kind, result = conn.recv()
+  File "/opt/conda/envs/Langchain-Chatchat/lib/python3.10/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/opt/conda/envs/Langchain-Chatchat/lib/python3.10/multiprocessing/connection.py", line 414, in _recv_bytes
+    buf = self._recv(4)
+  File "/opt/conda/envs/Langchain-Chatchat/lib/python3.10/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+  File "/home/ubuntu/Langchain-Chatchat/startup.py", line 573, in f
+    raise KeyboardInterrupt(f"{signalname} received")
+KeyboardInterrupt: SIGTERM received
+/opt/conda/envs/Langchain-Chatchat/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
