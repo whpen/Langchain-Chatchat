@@ -321,6 +321,10 @@ def knowledge_base_page(api: ApiRequest):
                         fp,
                         file_name=file_name,
                         use_container_width=True, )
+                    # print(file_path) #/home/ubuntu/Langchain-Chatchat/knowledge_base/test/content/2f4f548f-7725-435d-865d-30b53ab48d79号码检测产品介绍PPTv1.0.pdf
+                    # print(file_name) #2f4f548f-7725-435d-865d-30b53ab48d79号码检测产品介绍PPTv1.0.pdf
+                    
+                    
             else:
                 cols[0].download_button(
                     "下载选中文档",

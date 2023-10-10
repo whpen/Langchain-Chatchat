@@ -11,6 +11,10 @@ OPEN_CROSS_DOMAIN = False
 # 各服务器默认绑定host。如改为"0.0.0.0"需要修改下方所有XX_SERVER的host
 DEFAULT_BIND_HOST = "0.0.0.0"
 
+#对于出处中的下载情景，如果是公开部署，需要将7861端口的访问映射到Domain上；如果是非公开部署，则不需要映射：
+# DOMAIN_FOR_PORT_7861 = False
+DOMAIN_FOR_PORT_7861 ="content.knowledgebase.ppeng.click"
+
 # webui.py server
 WEBUI_SERVER = {
     "host": DEFAULT_BIND_HOST,
