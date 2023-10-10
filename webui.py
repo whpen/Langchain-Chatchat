@@ -62,7 +62,14 @@ if __name__ == "__main__":
 
     with st.sidebar:
         #add logo 
-
+        st.image(
+            os.path.join(
+                "img",
+                "toast_shark.jpeg",
+            ),
+            # width = 150,
+            use_column_width=True
+        )
         #add "powered by" logo
 
         st.image(
