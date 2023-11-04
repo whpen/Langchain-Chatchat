@@ -42,17 +42,18 @@ MODEL_PATH = {
         # "chatglm-6b": "THUDM/chatglm-6b",
         # "chatglm2-6b": "THUDM/chatglm2-6b",
         "chatglm2-6b-int4": "THUDM/chatglm2-6b-int4",
-        "chatglm2-6b-32k-int4": "THUDM/chatglm2-6b-int4/chatglm2-6b-32k-int4",
+        # "chatglm2-6b-32k-int4": "THUDM/chatglm2-6b-int4/chatglm2-6b-32k-int4",
+        "chatglm3-6b": "THUDM/chatglm3-6b",
         # "chatglm2-6b-int4": "/home/ec2-user/chatglm2-6b-int4",
         # "chatglm2-6b-32k": "THUDM/chatglm2-6b-32k", 
         # "chatglm2-6b-32k-int4": "/home/ec2-user/chatglm2-6b-32k-int4",
 
-        # "baichuan2-13b":"baichuan-inc/Baichuan-13B-Chat",
+        # "baichuan2-13b":"baichuan-inc/Baichuan2-13B-Chat",
         # "baichuan2-7b":"baichuan-inc/Baichuan2-7B-Chat",
 
         # "baichuan-7b": "baichuan-inc/Baichuan-7B",
         # "baichuan-13b": "baichuan-inc/Baichuan-13B",
-        # 'Baichuan2-7B-Chat-4bits':r'G:\MODELS\Baichuan2-7B-Chat-4bits',
+        "Baichuan2-13B-Chat":"baichuan-inc/Baichuan2-13B-Chat",
 
         # "aquila-7b":"BAAI/Aquila-7B",
         # "aquilachat-7b":"BAAI/AquilaChat-7B",
@@ -91,7 +92,7 @@ MODEL_PATH = {
         # "Qwen-7B":"Qwen/Qwen-7B",
         # "Qwen-14B":"Qwen/Qwen-14B",
         # "Qwen-7B-Chat":"Qwen/Qwen-7B-Chat",
-        # "Qwen-14B-Chat":"Qwen/Qwen-14B-Chat",
+        "Qwen-14B-Chat-Int4":"Qwen/Qwen-14B-Chat-Int4",
     },
 }
 
@@ -105,14 +106,17 @@ EMBEDDING_DEVICE = "auto"
 # LLM 名称
 LLM_MODEL = "chatglm2-6b-int4"
 # LLM_MODEL = "chatglm2-6b-32k-int4"
+# LLM_MODEL = "chatglm3-6b"
 # LLM_MODEL = "Chinese-Llama-2-7b-4bit"
-# LLM_MODEL = "baichuan2-7b"
+# LLM_MODEL = "baichuan2-13b"
+# LLM_MODEL = "Baichuan2-13B-Chat"
+# LLM_MODEL = "Qwen-14B-Chat-Int4"
 
 # LLM 运行设备。设为"auto"会自动检测，也可手动设定为"cuda","mps","cpu"其中之一。
 LLM_DEVICE = "auto"
 
 # 历史对话轮数
-HISTORY_LEN = 1
+HISTORY_LEN = 0
 
 # LLM通用对话参数
 TEMPERATURE = 0.2
@@ -135,55 +139,55 @@ ONLINE_LLM_MODEL = {
     # 4.0 seconds as it raised APIConnectionError: Error communicating with OpenAI.
     # 需要添加代理访问(正常开的代理软件可能会拦截不上)需要设置配置openai_proxy 或者 使用环境遍历OPENAI_PROXY 进行设置
     # 比如: "openai_proxy": 'http://127.0.0.1:4780'
-    "gpt-3.5-turbo": {
-        "api_base_url": "https://api.openai.com/v1",
-        "api_key": "your OPENAI_API_KEY",
-        "openai_proxy": "your OPENAI_PROXY",
-    },
-    # 线上模型。请在server_config中为每个在线API设置不同的端口
-    # 具体注册及api key获取请前往 http://open.bigmodel.cn
-    "zhipu-api": {
-        "api_key": "",
-        "version": "chatglm_pro",  # 可选包括 "chatglm_lite", "chatglm_std", "chatglm_pro"
-        "provider": "ChatGLMWorker",
-    },
-    # 具体注册及api key获取请前往 https://api.minimax.chat/
-    "minimax-api": {
-        "group_id": "",
-        "api_key": "",
-        "is_pro": False,
-        "provider": "MiniMaxWorker",
-    },
-    # 具体注册及api key获取请前往 https://xinghuo.xfyun.cn/
-    "xinghuo-api": {
-        "APPID": "",
-        "APISecret": "",
-        "api_key": "",
-        "is_v2": False,
-        "provider": "XingHuoWorker",
-    },
-    # 百度千帆 API，申请方式请参考 https://cloud.baidu.com/doc/WENXINWORKSHOP/s/4lilb2lpf
-    "qianfan-api": {
-        "version": "ernie-bot-turbo",  # 当前支持 "ernie-bot" 或 "ernie-bot-turbo"， 更多的见官方文档。
-        "version_url": "", # 也可以不填写version，直接填写在千帆申请模型发布的API地址
-        "api_key": "",
-        "secret_key": "",
-        "provider": "QianFanWorker",
-    },
-    # 火山方舟 API，文档参考 https://www.volcengine.com/docs/82379
-    "fangzhou-api": {
-        "version": "chatglm-6b-model",  # 当前支持 "chatglm-6b-model"， 更多的见文档模型支持列表中方舟部分。
-        "version_url": "",  # 可以不填写version，直接填写在方舟申请模型发布的API地址
-        "api_key": "",
-        "secret_key": "",
-        "provider": "FangZhouWorker",
-    },
-    # 阿里云通义千问 API，文档参考 https://help.aliyun.com/zh/dashscope/developer-reference/api-details
-    "qwen-api": {
-        "version": "qwen-turbo",  # 可选包括 "qwen-turbo", "qwen-plus"
-        "api_key": "",  # 请在阿里云控制台模型服务灵积API-KEY管理页面创建
-        "provider": "QwenWorker",
-    },
+    # "gpt-3.5-turbo": {
+    #     "api_base_url": "https://api.openai.com/v1",
+    #     "api_key": "your OPENAI_API_KEY",
+    #     "openai_proxy": "your OPENAI_PROXY",
+    # },
+    # # 线上模型。请在server_config中为每个在线API设置不同的端口
+    # # 具体注册及api key获取请前往 http://open.bigmodel.cn
+    # "zhipu-api": {
+    #     "api_key": "",
+    #     "version": "chatglm_pro",  # 可选包括 "chatglm_lite", "chatglm_std", "chatglm_pro"
+    #     "provider": "ChatGLMWorker",
+    # },
+    # # 具体注册及api key获取请前往 https://api.minimax.chat/
+    # "minimax-api": {
+    #     "group_id": "",
+    #     "api_key": "",
+    #     "is_pro": False,
+    #     "provider": "MiniMaxWorker",
+    # },
+    # # 具体注册及api key获取请前往 https://xinghuo.xfyun.cn/
+    # "xinghuo-api": {
+    #     "APPID": "",
+    #     "APISecret": "",
+    #     "api_key": "",
+    #     "is_v2": False,
+    #     "provider": "XingHuoWorker",
+    # },
+    # # 百度千帆 API，申请方式请参考 https://cloud.baidu.com/doc/WENXINWORKSHOP/s/4lilb2lpf
+    # "qianfan-api": {
+    #     "version": "ernie-bot-turbo",  # 当前支持 "ernie-bot" 或 "ernie-bot-turbo"， 更多的见官方文档。
+    #     "version_url": "", # 也可以不填写version，直接填写在千帆申请模型发布的API地址
+    #     "api_key": "",
+    #     "secret_key": "",
+    #     "provider": "QianFanWorker",
+    # },
+    # # 火山方舟 API，文档参考 https://www.volcengine.com/docs/82379
+    # "fangzhou-api": {
+    #     "version": "chatglm-6b-model",  # 当前支持 "chatglm-6b-model"， 更多的见文档模型支持列表中方舟部分。
+    #     "version_url": "",  # 可以不填写version，直接填写在方舟申请模型发布的API地址
+    #     "api_key": "",
+    #     "secret_key": "",
+    #     "provider": "FangZhouWorker",
+    # },
+    # # 阿里云通义千问 API，文档参考 https://help.aliyun.com/zh/dashscope/developer-reference/api-details
+    # "qwen-api": {
+    #     "version": "qwen-turbo",  # 可选包括 "qwen-turbo", "qwen-plus"
+    #     "api_key": "",  # 请在阿里云控制台模型服务灵积API-KEY管理页面创建
+    #     "provider": "QwenWorker",
+    # },
 }
 
 
@@ -200,6 +204,7 @@ VLLM_MODEL_DICT = {
     "baichuan-7b": "baichuan-inc/Baichuan-7B",
     "baichuan-13b": "baichuan-inc/Baichuan-13B",
     'baichuan-13b-chat':'baichuan-inc/Baichuan-13B-Chat',
+    # 'Baichuan2-13B-Chat':'baichuan-inc/Baichuan2-13B-Chat',
     # 注意：bloom系列的tokenizer与model是分离的，因此虽然vllm支持，但与fschat框架不兼容
     # "bloom":"bigscience/bloom",
     # "bloomz":"bigscience/bloomz",
